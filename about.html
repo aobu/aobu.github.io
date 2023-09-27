@@ -5,32 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>About Benoit Travel</title>
+
+    <style>
+        /* Shared styles for both desktop and mobile */
+        .body-content {
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            background-color: #f5deb3;
+            color: #000;
+            text-align: left;
+        }
+
+        .body-image {
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            background-color: #f5deb3;
+            color: #000;
+            text-align: left;
+            display: flex;
+            align-items: center; /* Vertically center align content */
+        }
+
+        .image-container {
+            flex: 1;
+            background-image: url('hotel.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 300px; /* Adjust the height as needed */
+            margin-right: 20px; /* Add some spacing between the image and text */
+        }
+
+        .text-container {
+            flex: 2; /* Adjust the width of the text container as needed */
+        }
+
+        /* Media query for screens smaller than 768px (typical mobile screens) */
+        @media (max-width: 768px) {
+            .body-image {
+                flex-direction: column; /* Stack image and text vertically */
+                text-align: center; /* Center-align text */
+            }
+
+            .image-container {
+                height: auto; /* Adjust height automatically */
+                margin-right: 0; /* Remove right margin */
+            }
+
+            .text-container {
+                text-align: left; /* Reset text alignment to left */
+                margin-top: 20px; /* Add spacing between image and text on mobile */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-
     </header>
-
-    <section class="content">
-        <h1>Welcome to Benoit Travel</h1>
-          <nav>
-              <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-              </ul>
-          </nav>
-    </section>
 
     <main>
         <section class="content">
+            <h1>Welcome to Benoit Travel</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="body-content">
             <h2>Our Story</h2>
             <p>Benoit Travel is a premier luxury service provider specializing in crafting exceptional travel experiences. With a passion for opulence and attention to detail, we redefine luxury travel.</p>
         </section>
 
-        <section class="content">
+        <section class="body-content">
             <h2>Our Team</h2>
             <p>Our team of dedicated experts is committed to ensuring that your every travel desire is not only met but surpassed. From travel planners to personal concierge support, we're here to make your journey extraordinary.</p>
+        </section>
+
+        <section class="body-image">
+            <div class="image-container"></div>
+            <div class="text-container">
+                <h2>Exotic Beachfront Retreats</h2>
+                <p>For those seeking the tranquil embrace of pristine beaches and the soothing rhythm of the ocean waves, our exotic beachfront hotels offer a serene escape. Immerse yourself in luxury while enjoying breathtaking coastal views, private cabanas, and world-class spa experiences..</p>
+            </div>
         </section>
     </main>
 

@@ -1,17 +1,15 @@
-/* Reset some default styles */
 body, h1, h2, p, ul, li, form {
     margin: 0;
     padding: 0;
 }
 
-/* Basic styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
 }
 
 header {
-    background-image: url('holiday-resort-lombok.jpg'); /* Replace with your banner image */
+    background-image: url('holiday-resort-lombok.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -38,7 +36,7 @@ nav a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.2s;
 }
 
 nav a:hover {
@@ -57,8 +55,8 @@ main {
     padding: 20px;
     border-radius: 5px;
     margin-bottom: 30px;
-    background-color: #f5deb3; /* Light brown background color */
-    color: #000; /* Black text color */
+    background-color: #f5deb3;
+    color: #000;
     text-align: center;
 }
 
