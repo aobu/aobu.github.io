@@ -7,7 +7,7 @@
     <title>About Benoit Travel</title>
 
     <style>
-        /* Shared styles for both desktop and mobile */
+
         .body-content {
             padding: 20px;
             border-radius: 5px;
@@ -25,7 +25,7 @@
             color: #000;
             text-align: left;
             display: flex;
-            align-items: center; /* Vertically center align content */
+            align-items: center;
         }
 
         .image-container {
@@ -33,29 +33,29 @@
             background-image: url('hotel.jpg');
             background-repeat: no-repeat;
             background-position: center;
-            height: 300px; /* Adjust the height as needed */
-            margin-right: 20px; /* Add some spacing between the image and text */
+            height: 300px;
+            margin-right: 20px;
         }
 
         .text-container {
-            flex: 2; /* Adjust the width of the text container as needed */
+            flex: 2;
         }
 
-        /* Media query for screens smaller than 768px (typical mobile screens) */
+
         @media (max-width: 768px) {
             .body-image {
-                flex-direction: column; /* Stack image and text vertically */
-                text-align: center; /* Center-align text */
+                flex-direction: column;
+                text-align: center; 
             }
 
             .image-container {
-                height: auto; /* Adjust height automatically */
-                margin-right: 0; /* Remove right margin */
+                height: auto;
+                margin-right: 0;
             }
 
             .text-container {
-                text-align: left; /* Reset text alignment to left */
-                margin-top: 20px; /* Add spacing between image and text on mobile */
+                text-align: left;
+                margin-top: 20px;
             }
         }
     </style>
