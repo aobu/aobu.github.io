@@ -1,0 +1,27 @@
+products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    padding: 20px;
+}
+
+product {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: gray;
+    color: white;
+}
+
+name {
+    font-weight: bold;
+    color: white;
+}
+
+name, description, size, price, category {
+    display:block;
+    text-align:left;
+    }

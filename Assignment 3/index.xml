@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="styles.css"?>
+<products>
+    <product>
+        <name>Vintage T-shirt</name>
+        <description>Tie-dye Grateful Dead T-shirt</description>
+        <size> Size: Large</size>
+        <price>Price: $35</price>
+        <category>Clothing</category>
+        <category>Vintage</category>
+    </product>
+    <product>
+        <name>Denim Jacket</name>
+        <description>Classic Blue Denim Jacket</description>
+        <size> Size: Small</size>
+        <price>Price: $45</price>
+        <category>Clothing</category>
+        <category>Outerwear</category>
+    </product>
+    <product>
+        <name>Leather Pants</name>
+        <description>Black Leather Skinny Pants</description>
+        <size> Size: Large</size>
+        <price>Price: $50</price>
+        <category>Clothing</category>
+        <category>Bottoms</category>
+    </product>
+    <product>
+        <name>Floral Dress</name>
+        <description>Summer Floral Print Dress</description>
+        <size> Size: Small</size>
+        <price>Price: $40</price>
+        <category>Clothing</category>
+        <category>Dresses</category>
+    </product>
+    <product>
+        <name>Hoodie</name>
+        <description>Comfy Hooded Sweatshirt</description>
+        <size> Size: XL</size>
+        <price>Price: $30</price>
+        <category>Clothing</category>
+        <category>Casual</category>
+    </product>
+    <product>
+        <name>Sweater</name>
+        <description>Cozy Knit Sweater</description>
+        <size> Size: Large</size>
+        <price>Price: $35</price>
+        <category>Clothing</category>
+        <category>Winter</category>
+    </product>
+    <product>
+        <name>Jeans</name>
+        <description>Classic Blue Jeans</description>
+        <size> Size: Small</size>
+        <price>Price: $40</price>
+        <category>Clothing</category>
+        <category>Bottoms</category>
+    </product>
+    <product>
+        <name>Shorts</name>
+        <description>Summer Shorts</description>
+        <size> Size: Medium</size>
+        <price>Price: $25</price>
+        <category>Clothing</category>
+        <category>Casual</category>
+    </product>
+    <product>
+    <name>Striped Polo Shirt</name>
+        <description>Classic Striped Polo Shirt</description>
+        <size> Size: Medium</size>
+        <price>Price: $28</price>
+        <category>Clothing</category>
+        <category>Casual</category>
+    </product>
+    <product>
+        <name>Leather Jacket</name>
+        <description>Black Leather Biker Jacket</description>
+        <size> Size: Large</size>
+        <price>Price: $70</price>
+        <category>Clothing</category>
+        <category>Outerwear</category>
+    </product>
+    <product>
+        <name>Summer Hat</name>
+        <description>Wide-Brim Straw Hat</description>
+        <size> Size: One Size</size>
+        <price>Price: $15</price>
+        <category>Accessories</category>
+        <category>Summer</category>
+    </product>
+    <product>
+        <name>Slim Fit Trousers</name>
+        <description>Gray Slim Fit Dress Trousers</description>
+        <size> Size: Small</size>
+        <price>Price: $55</price>
+        <category>Clothing</category>
+        <category>Bottoms</category>
+    </product>
+    <product>
+        <name>Running Shoes</name>
+        <description>Lightweight Running Shoes</description>
+        <size> Size: Medium</size>
+        <price>Price: $50</price>
+        <category>Clothing</category>
+        <category>Footwear</category>
+    </product>
+    <product>
+        <name>Graphic T-shirt</name>
+        <description>Cool Graphic Print Tee</description>
+        <size> Size: Medium</size>
+        <price>Price: $20</price>
+        <category>Clothing</category>
+        <category>Casual</category>
+    </product>
+    <product>
+        <name>Office Blouse</name>
+        <description>Formal White Office Blouse</description>
+        <size> Size: Small</size>
+        <price>Price: $35</price>
+        <category>Clothing</category>
+        <category>Workwear</category>
+    </product>
+    <product>
+        <name>Sporty Cap</name>
+        <description>Adjustable Sports Cap</description>
+        <size> Size: One Size</size>
+        <price>Price: $18</price>
+        <category>Accessories</category>
+        <category>Sportswear</category>
+    </product>
+    <product>
+        <name>Cargo Shorts</name>
+        <description>Khaki Cargo Shorts</description>
+        <size> Size: Medium</size>
+        <price>Price: $30</price>
+        <category>Clothing</category>
+        <category>Casual</category>
+    </product>
+    <product>
+        <name>Formal Blazer</name>
+        <description>Charcoal Gray Formal Blazer</description>
+        <size> Size: Medium</size>
+        <price>Price: $60</price>
+        <category>Clothing</category>
+        <category>Outerwear</category>
+    </product>
+</products>
