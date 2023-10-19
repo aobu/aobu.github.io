@@ -1,0 +1,12 @@
+Standard:
+	Url:
+		alexisobu.com
+	Files:
+		index.html, styles.css, script.js
+		
+Extra Credit:
+	Url:
+		aobu.github.io
+	Files:
+		index.html, styles.css, script_extracred.js
+		
