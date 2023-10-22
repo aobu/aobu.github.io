@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>json3.html</title>
+    <style>
+        .product {
+            background-color: #d1dce3;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #filteredProducts {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" 
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Products</h1>
+    
+    <form id="filterForm">
+        <label for="categorySelect">Select a Category:</label>
+        <select id="categorySelect"></select>
+        <button type="button" id="filterButton">Filter</button>
+    </form>
+
+    <div id="filteredProducts">
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            var jsonData;
+
+            $.get("products.json", function (data) {
+                jsonData = data;
+
+                var categories = jsonData.products.reduce(function (uniqueCategories, product) {
+                    product.categories.forEach(function (category) {
+                        if (!uniqueCategories.includes(category)) {
+                            uniqueCategories.push(category);
+                        }
+                    });
+                    return uniqueCategories;
+                }, []);
+
+                var categorySelect = $("#categorySelect");
+                categories.forEach(function (category) {
+                    categorySelect.append($("<option>").text(category));
+                });
+
+                $("#filterButton").click(function () {
+                    var selectedCategory = $("#categorySelect").val();
+                    var filteredProductNames = jsonData.products
+                        .filter(function (product) {
+                            return product.categories.includes(selectedCategory);
+                        })
+                        .map(function (product) {
+                            return product.name;
+                        });
+
+                    var filteredProductsDiv = $("#filteredProducts");
+                    filteredProductsDiv.empty();
+                    if (filteredProductNames.length === 0) {
+                        filteredProductsDiv.text("No products");
+                    } else {
+                        filteredProductNames.forEach(function (productName) {
+                            filteredProductsDiv.append($("<p>").text(productName));
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

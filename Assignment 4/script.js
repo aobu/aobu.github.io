@@ -53,3 +53,8 @@ orderSummary.innerHTML += `
     <p>Tax: ${formatCurrency(tax)}</p>
     <p><strong>Final Total: ${formatCurrency(total)}</strong></p>
 `;
+
+n = 1;
+for (i=0; i<5; i++)
+      n += i-1;
+alert( i );

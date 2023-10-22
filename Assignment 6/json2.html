@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>json2.html</title>
+    <style>
+        .product {
+            background-color: #d1dce3;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="productList">
+    </div>
+
+    <script 
+    src="https://code.jquery.com/jquery-3.7.1.js" 
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+    crossorigin="anonymous"></script>
+    <script>
+        $.get("products.json", function (data) {
+            var products = data.products;
+            products.forEach(function (product) {
+                var productDiv = document.createElement("div");
+                productDiv.className = "product";
+                productDiv.innerHTML = `
+                    <strong>${product.name}</strong><br>
+                    ${product.description}<br>
+                    Size: ${product.details.Size}<br>
+                    Price: ${product.details.Price}<br>
+                    Categories: ${product.categories.join(', ')}
+                `;
+                document.getElementById("productList").appendChild(productDiv);
+            });
+        });
+    </script>
+</body>
+</html>

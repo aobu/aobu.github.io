@@ -1,7 +1,0 @@
-URL:
-
-aobu.github.io
-
-Assignment5 Q's:
-
-I think hardcoding the win conditions was the easiest and most readable way to do it.

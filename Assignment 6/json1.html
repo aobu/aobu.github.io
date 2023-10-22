@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>json1.html</title>
+</head>
+<body>
+
+<script>
+    var products = {
+        "products": [
+            {
+                "name": "Vintage T-shirt",
+                "description": "Tie-dye Grateful Dead T-shirt",
+                "details": {
+                    "Size": "medium",
+                    "Price": "$35"
+                },
+                "categories": ["clothing", "vintage"]
+            },
+            {
+                "name": "Designer Jeans",
+                "description": "High-end denim jeans for men",
+                "details": {
+                    "Size": "32x32",
+                    "Price": "$79"
+                },
+                "categories": ["clothing", "designer"]
+            },
+            {
+                "name": "Laptop Bag",
+                "description": "Stylish laptop bag with multiple compartments",
+                "details": {
+                    "Color": "Black",
+                    "Price": "$49"
+                },
+                "categories": ["electronics", "accessories"]
+            },
+            {
+                "name": "Wireless Headphones",
+                "description": "Over-ear Bluetooth headphones with noise cancellation",
+                "details": {
+                    "Color": "Silver",
+                    "Price": "$129"
+                },
+                "categories": ["electronics", "audio"]
+            },
+            {
+                "name": "Gourmet Coffee",
+                "description": "Organic single-origin coffee beans",
+                "details": {
+                    "Roast Level": "Medium",
+                    "Price": "$14.99"
+                },
+                "categories": ["food", "beverages"]
+            },
+            {
+                "name": "Smartwatch",
+                "description": "Fitness and health tracking smartwatch",
+                "details": {
+                    "Color": "Black",
+                    "Price": "$199"
+                },
+                "categories": ["electronics", "wearables"]
+            },
+            {
+                "name": "Leather Wallet",
+                "description": "Genuine leather bifold wallet",
+                "details": {
+                    "Color": "Brown",
+                    "Price": "$49.95"
+                },
+                "categories": ["accessories", "fashion"]
+            },
+            {
+                "name": "Sneakers",
+                "description": "Athletic shoes for running and training",
+                "details": {
+                    "Size": "9",
+                    "Price": "$79.99"
+                },
+                "categories": ["footwear", "sports"]
+            },
+            {
+                "name": "Desk Chair",
+                "description": "Ergonomic office chair with lumbar support",
+                "details": {
+                    "Color": "Black",
+                    "Price": "$149.99"
+                },
+                "categories": ["furniture", "office"]
+            },
+            {
+                "name": "Bluetooth Speaker",
+                "description": "Portable wireless speaker with rich sound",
+                "details": {
+                    "Color": "Red",
+                    "Price": "$59.99"
+                },
+                "categories": ["electronics", "audio"]
+            },
+            {
+                "name": "Canvas Backpack",
+                "description": "Durable canvas backpack for outdoor adventures",
+                "details": {
+                    "Color": "Khaki",
+                    "Price": "$39.99"
+                },
+                "categories": ["accessories", "outdoor"]
+            },
+            {
+                "name": "Vintage Record Player",
+                "description": "Retro-style turntable with built-in speakers",
+                "details": {
+                    "Color": "Burgundy",
+                    "Price": "$199.99"
+                },
+                "categories": ["electronics", "vintage"]
+            }
+        ]
+    };
+
+    var jsonString = JSON.stringify(products, null, 2);
+    console.log(jsonString);
+</script>
+
+</body>
+</html>
