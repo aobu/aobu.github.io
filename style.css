@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+
+body {
+  font-family: 'DM Mono', monospace;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 1.4em;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1 { 
+  line-height: 1em; 
+  font-weight: 500;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.wrap { 
+  max-width: 780px; 
+  margin: 0 auto; 
+}
+
+.nav {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.nav a {
+  color: rgba(0, 0, 0, 0.65);
+  text-decoration: none;
+  border-bottom: none;
+  font-size: 14px;
+}
+
+.nav a:hover {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+.nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.nav ul li a img {
+  height: 1em;
+  vertical-align: text-bottom;
+  opacity: 0.65;
+}
+
+.nav ul li a:hover img {
+  opacity: 0.85;
+}
+
+p {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.post-title a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.post-title a:hover {
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.post-date {
+  margin-top: -0.75rem;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+@media only screen and (max-width: 768px) {
+  .wrap {
+      margin: 7px;
+      max-width: 95%;
+      overflow-x: hidden;
+  }
+}
