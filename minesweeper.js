@@ -216,6 +216,7 @@ function checkWinCondition() {
     if (revealedCells === TOTAL_CELLS - NUM_MINES) {
         console.log('Win');
         revealAllMines();
+        triggerConfetti();
         endGame();
     }
 }
@@ -288,6 +289,15 @@ function resetTimer() {
 function updateTimerDisplay() {
     const timerElement = document.getElementById('timer');
     timerElement.textContent = elapsedTime.toString().padStart(4, '0');
+}
+
+
+function triggerConfetti() {
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+    });
 }
 
 document.getElementById('resetButton').addEventListener('click', resetGame);
