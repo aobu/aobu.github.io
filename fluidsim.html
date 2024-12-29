@@ -23,9 +23,67 @@
         <!-- About -->
         <div class="wrap">
             <div class="fluidsim">
-                <h1>Real-Time Fluid Dynamics</h1>
-                <p>Find at: <a href="https://github.com/aobu/FluidSim" target="_blank">FluidSim</a></p>
-                <p>#TODO</p>
+                <h1>Real-Time Fluid Dynamics Simulation</h1>
+
+                <p>
+                    Find out more at:
+                    <a href="https://github.com/aobu/FluidSim" target="_blank" rel="noopener noreferrer">
+                        github
+                    </a>
+                </p>
+
+                <p>
+                    This is a C++ implementation of Jos Stam’s <em>“Real-Time Fluid Dynamics for Games”</em> algorithm,
+                    paired with an OpenGL renderer for interactive visualization. As the simulation runs, users can click
+                    and drag to add forces or introduce more fluid, instantly altering the flow and density fields.
+                </p>
+
+                <p>
+                    The core logic is a grid-based solver for the Navier–Stokes equations, designed for real-time performance.
+                    Each time step updates velocity and density through advection (moving existing fluid quantities), diffusion
+                    (simulating viscosity or natural spreading), and projection (maintaining incompressibility).
+                </p>
+
+                <p>
+                    This simulation provides features such as adjustable viscosity and flow strength, letting you observe how
+                    changes in parameters create different fluid behaviors. The OpenGL-based rendering ensures that changes
+                    are visible immediately, while the C++ implementation is optimized to keep frame rates high even under
+                    continuous user interaction.
+                </p>
+
+                <p>
+                    To add forces, click and drag with the left mouse button. To inject extra fluid density, right-click in
+                    the simulation window. These interactions update the solver in real time, producing a dynamic and
+                    visually engaging flow.
+                </p>
+
+                <p>
+                    Below is a quick demonstration of the simulation in action:
+                </p>
+
+                <img 
+                    src="assets/recording.gif" 
+                    alt="Fluid Simulation Demo" 
+                    class="responsive-gif"
+                >
+
+                <p>
+                    For more details on the algorithm, refer to 
+                    <a 
+                        href="http://graphics.cs.cmu.edu/nsp/course/15-464/Fall09/papers/StamFluidforGames.pdf"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
+                        Jos Stam’s original paper
+                    </a>.
+                </p>
+
+                <p>
+                    This project is licensed under the MIT License.
+                    See the 
+                    <a href="LICENSE" target="_blank" rel="noopener noreferrer">LICENSE</a>
+                    file for details.
+                </p>
             </div>
         </div>
     </div>

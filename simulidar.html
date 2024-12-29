@@ -24,8 +24,80 @@
         <div class="wrap">
             <div class="particlefilter">
                 <h1>SimuLIDAR</h1>
-                <p>Find at: <a href="https://github.com/aobu/SimuLIDAR" target="_blank">REPO</a></p>
-                <p>#TODO</p>
+
+                <p>
+                    Find out more at:
+                    <a href="https://github.com/aobu/SimuLIDAR" target="_blank" rel="noopener noreferrer">
+                        github
+                    </a>
+                </p>
+                
+                <p>
+                    SimuLIDAR is a 2D LIDAR scanner simulation tool developed with OpenCV. It allows you to simulate the 
+                    operation of a LIDAR on a black-and-white floor plan or similar map. Noise is introduced to the 
+                    simulated measurements so that the data more closely reflects real-world scanner behavior.
+                </p>
+                
+                <p>
+                    Measurements from the simulated scanner are then processed to extract structural features, 
+                    producing a reconstructed map of the environment. The workflow includes generating a point cloud 
+                    from the simulated readings, applying Canny edge detection to locate boundaries, and using the 
+                    Probabilistic Hough Line Transform to identify dominant lines.
+                </p>
+                
+                <p>
+                    Below is an example of the process, starting with a raw input map. The tool outputs a point cloud 
+                    of simulated measurements, detects edges on the cloud, and finally reconstructs the environment:
+                </p>
+                
+                <p>The input map:</p>
+                <p style="text-align:center;">
+                    <img 
+                        src="/assets/FloorPlan2.png" 
+                        alt="Input Map" 
+                        style="max-width:500px; width:80%; height:auto;"
+                    >
+                </p>
+                
+                <p>The point cloud generated from LIDAR scans:</p>
+                <p style="text-align:center;">
+                    <img 
+                        src="/assets/LIDARDisplay2024-08-1719-55-18-ezgif.com-video-to-gif-converter.gif"
+                        alt="Point Cloud"
+                        style="max-width:500px; width:80%; height:auto;"
+                    >
+                </p>
+                
+                <p>Edges detected on the point cloud:</p>
+                <p style="text-align:center;">
+                    <img 
+                        src="/assets/LIDARDisplay2024-08-1719-58-30-ezgif.com-video-to-gif-converter.gif"
+                        alt="Edges"
+                        style="max-width:500px; width:80%; height:auto;"
+                    >
+                </p>
+                
+                <p>The final reconstructed environment:</p>
+                <p style="text-align:center;">
+                    <img 
+                        src="/assets/LIDARDisplay2024-08-1720-00-04-ezgif.com-video-to-gif-converter.gif"
+                        alt="Reconstructed Map"
+                        style="max-width:500px; width:80%; height:auto;"
+                    >
+                </p>
+                
+                <p>
+                    This simulation reproduces several key steps of a real LIDAR pipeline. It accounts for measurement 
+                    noise, transforms raw angle-range data into a point cloud, and applies computer vision methods to 
+                    identify and visualize structural elements. In doing so, SimuLIDAR demonstrates how a LIDAR-like 
+                    sensor can be approximated and processed within a purely virtual environment.
+                </p>
+                
+                <p>
+                    This project is licensed under the MIT License. See the 
+                    <a href="LICENSE" target="_blank" rel="noopener noreferrer">LICENSE</a> file for details.
+                </p>
+                
             </div>
         </div>
     </div>

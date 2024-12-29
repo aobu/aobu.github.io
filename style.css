@@ -86,6 +86,15 @@ p {
   color: rgba(0, 0, 0, 0.65);
 }
 
+.responsive-gif {
+  max-width: 100%; 
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-top: 0.5em;
+  border-bottom: 0.5em;
+}
+
 @media only screen and (max-width: 768px) {
   .wrap {
       margin: 7px;

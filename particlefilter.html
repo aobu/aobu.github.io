@@ -24,8 +24,66 @@
         <div class="wrap">
             <div class="particlefilter">
                 <h1>Image-Based Particle Filter for Drone Localization</h1>
-                <p>Find at: <a href="https://github.com/aobu/ParticleFilter" target="_blank">REPO</a></p>
-                <p>#TODO</p>
+
+                <p>
+                    Find out more at: 
+                    <a href="https://github.com/aobu/ParticleFilter" target="_blank" rel="noopener noreferrer">github</a>
+                </p>
+
+                <p>
+                    This project implements an Image-Based Particle Filter in Python to estimate the position of a simulated drone 
+                    on a known map. The drone’s “sensor” is a small camera scan, and each reading helps refine where on the map 
+                    the drone might be. Particle filters are ideal for handling sensor noise and other uncertainties inherent 
+                    in real-world localization tasks.
+                </p>
+
+                <p>
+                    At the core of this approach is a set of particles (initialized with random position) each encoding a hypothesis about the real drone location. 
+                    As the drone moves (with noise to mimic wind or imperfect motion estimates), every particle is 
+                    updated accordingly. Then, each particle’s predicted “camera view” is compared to what the drone actually sees. 
+                    Particles that produce close matches gain weight and are more likely to survive into the next iteration, while those with poor matches are eliminated.
+                </p>
+
+                <p>
+                    Key steps:
+                    <br>1) Distribute particles randomly across the map to represent initial uncertainty.
+                    <br>2) Move particles according to the drone’s estimated motion, adding random noise.
+                    <br>3) Compare the drone’s camera image to each particle’s hypothetical view using RGB histogram correlation.
+                    <br>4) Resample so that well-matching particles propagate more strongly in the next generation.
+                    <br>5) Iterate until particles converge around the drone’s true position.
+                </p>
+
+                <p>
+                    Technical highlights include simulating sensor noise, ensuring realistic motion uncertainty, 
+                    and leveraging image-based matching techniques. Python’s ecosystem (NumPy, OpenCV, etc.) 
+                    made handling these operations straightforward and efficient.
+                </p>
+
+                <p>Below are quick GIFs demonstrating this filter in action:</p>
+                <img 
+                    src="/assets/CityMapGif.gif" 
+                    alt="Demo of particle filter localization on a city map" 
+                    class="responsive-gif"
+                >
+                <p></p>
+                <img 
+                    src="/assets/OtherMapGif.gif" 
+                    alt="Demo of particle filter localization on another map" 
+                    class="responsive-gif"
+                >
+
+                <p>
+                    References include 
+                    <a href="http://www.probabilistic-robotics.org/" target="_blank" rel="noopener noreferrer">
+                        Sebastian Thrun's "Probabilistic Robotics"
+                    </a> and the 
+                    <a href="https://en.wikipedia.org/wiki/Particle_filter" target="_blank" rel="noopener noreferrer">
+                        Particle Filter entry on Wikipedia
+                    </a>.
+                </p>
+
+                <p>This project is licensed under the MIT License. 
+                   See the <a href="LICENSE" target="_blank" rel="noopener noreferrer">LICENSE</a> file for details.</p>
             </div>
         </div>
     </div>
