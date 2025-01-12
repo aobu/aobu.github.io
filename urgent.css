@@ -142,6 +142,6 @@ html, body {
     }
 
     .task-controls input {
-        max-width: 35%;
+        width: 35%;
     }
 }
