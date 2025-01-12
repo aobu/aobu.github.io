@@ -111,3 +111,18 @@ html, body {
     background-color: var(--color-black);
     color: var(--color-red);
 }
+
+@media only screen and (max-width: 768px) {
+    .hazard-tape {
+        height: 3vh;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
