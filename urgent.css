@@ -145,4 +145,29 @@ html, body {
     .task-controls input {
         width: 35%;
     }
+
+    .task-controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .task-controls input {
+        flex: 1;
+        min-width: 120px;
+        width: auto;
+    }
+
+    .task-controls button {
+        white-space: nowrap;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: calc(100% - 2rem);
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
 }
