@@ -139,6 +139,7 @@ html, body {
         justify-items: right;
         justify-content: right;
         align-items: right;
+        margin-left: auto;
     }
 
     .task-controls input {
