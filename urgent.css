@@ -129,7 +129,7 @@ html, body {
 
     .task-controls {
         display: flex;
-        align-items: center;
+        align-items: right;
     }
 
     .task-controls input {
