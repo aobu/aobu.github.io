@@ -127,7 +127,18 @@ html, body {
         overflow-x: hidden;
     }
 
+    .task-controls {
+        display: flex;
+        align-items: center;
+    }
+
     .task-controls input {
-        max-width: 30%;
+        max-width: none;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .task-controls button {
+        flex-shrink: 0;
     }
 }
