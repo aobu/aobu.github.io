@@ -124,5 +124,10 @@ html, body {
     .container {
         padding-left: 1rem;
         padding-right: 1rem;
+        overflow-x: hidden;
+    }
+
+    .task-controls input {
+        max-width: 30%;
     }
 }
