@@ -1,0 +1,113 @@
+:root {
+    --color-black: #000000;
+    --color-hazard-yellow: #EED202;
+    --color-white: #FFFFFF;
+    --color-red: #FF0000;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hazard-tape {
+    width: 100vw;
+    height: 5vh;
+    border: 0;
+    background-image: repeating-linear-gradient(
+        -55deg,
+        var(--color-black),
+        var(--color-black) 25px,
+        var(--color-hazard-yellow) 25px,
+        var(--color-hazard-yellow) 45px
+    );
+    margin: 0;
+    padding: 0;
+}
+
+.container { 
+    max-width: 780px; 
+    margin: 0 auto; 
+}
+
+.header {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-weight: bolder;
+    margin: 0;
+    font-size: 3rem;
+}
+
+.task-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.task-controls input {
+    font-weight: bolder;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 0.3rem solid var(--color-black);
+}
+
+.task-controls input:focus {
+    outline: none;
+}
+
+.task-controls button {
+    font-weight: bolder;
+    font-size: 1rem;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.task-controls button:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-black);
+    padding-right: 0;
+}
+
+#taskList li:last-child {
+    border-bottom: none;
+}
+
+#taskList li button.deleteTask {
+    font-weight: bolder;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+#taskList li button.deleteTask:hover {
+    background-color: var(--color-black);
+    color: var(--color-red);
+}
