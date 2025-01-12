@@ -133,7 +133,7 @@ html, body {
     }
 
     .task-controls input {
-        max-width: none;
+        max-width: 30%;
         flex: 1;
         min-width: 0;
     }
