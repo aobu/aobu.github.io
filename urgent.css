@@ -117,56 +117,33 @@ html, body {
         height: 3vh;
     }
 
-    .header {
-        padding-top: 1rem;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
     .header h1 {
         font-size: 2rem;
     }
 
-    .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        overflow-x: hidden;
-    }
-
-    .task-controls {
-        justify-items: right;
-        justify-content: right;
-        align-items: right;
-        margin-left: auto;
-    }
-
-    .task-controls input {
-        width: 35%;
+    .header {
+        padding: 1rem;
+        align-items: center;
+        gap: 1rem;
     }
 
     .task-controls {
         display: flex;
         flex-wrap: wrap;
         gap: 5px;
-        width: 100%;
+        flex: 1;
+        max-width: 70%;
     }
 
     .task-controls input {
         flex: 1;
         min-width: 120px;
-        width: auto;
-    }
-
-    .task-controls button {
-        white-space: nowrap;
+        max-width: calc(100% - 70px);
     }
 
     .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        width: calc(100% - 2rem);
+        padding: 0 1rem;
+        width: 100%;
         box-sizing: border-box;
         overflow-x: hidden;
     }
