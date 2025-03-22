@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Fluid Simulation Upgrade: Extending to 3D</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Jos Stam's fluid simulation in three dimensions.">
+    <meta name="robots" content="all">
+    <link rel="canonical" href="https://alexisobu.com/3dfluid.com">
+  
+    <link rel="stylesheet" href="/style.css" type="text/css">
+    <script src="script.js"></script>
+    
+    <!-- Inline CSS for video grid and section titles -->
+    <style>
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .section-title {
+            color: black;
+            margin-top: 1em;
+        }
+        .blog-content p {
+            margin: 1em 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <!-- Navigation -->
+        <div id="nav-placeholder"></div>
+        
+        <!-- Blog Content -->
+        <div class="wrap">
+            <div class="blog-content">
+                
+                <video src="assets/standard.mp4" autoplay loop muted controls></video>
+                
+                <!-- New Blog Post Content -->
+                <p class="section-title">Extending Jos Stam's Fluid Simulation to Three Dimensions</p>
+                <p>
+                    I've recently revisited my <a href="https://alexisobu.com/fluidsim.html" target="_blank" rel="noopener noreferrer">fluid sim</a>, extending it from two dimensions to three dimensions. Code at: <a href="https://github.com/aobu/FluidSim3D" target="_blank" rel="noopener noreferrer">github</a>
+                </p>
+                
+                <p class="section-title">Extending to 3D</p>
+                <p>
+                    The original 2D simulation solves the Navier-Stokes equations in a simplified, computationally feasible way.
+                    Extending this to 3D was annoying but straightforward. Add another array to the directional values, edit the boundary conditions to handle a third dimension, and consider the extra neighbours for each cell when solving.
+                    I've been writing a lot of C recently, so I wrote this in C too.
+                </p>
+                
+                <p class="section-title">Numerical Methods</p>
+                <p>
+                    I rewrote the linear system solving logic using the Jacobi iteration method. The diffusion and pressure projection equations are solved by iteratively approximating a system of linear equations.
+                    Since I was overhauling most of the code, and with plans to parallelize portions to boost performance and increase my grid resolution, I opted for the Jacobi method over Gauss-Seidel. The Jacobi algorithm updates each unknown based solely on values from the previous iteration, allowing for independent, parallel computation across the grid.
+                    In contrast, Gauss-Seidel updates sequentially using the latest values, which creates dependencies and limits parallelism.
+                </p>
+                
+                <p class="section-title">Rendering: 2.5D</p>
+                <p>
+                    For rendering, I used a simple approach that still looks great. Since I was already comfortable rendering a grid of 2D cells, moving to 3D was as easy as stacking another dimension of these grids and rotating the camera to view them from the side.
+                    Because I only render from a fixed camera angle, any edge artifacts are minimal when using a large grid.
+                </p>
+                
+                <p class="section-title">Colours</p>
+                <p>
+                    Experimenting with the fragment shaders produced some very nice results, particularly the fire shader and a GOT-style "wildfire" shader.
+                    Despite several attempts at tweaking the viscosity and diffusion parameters, I couldn't get anything that looked convincingly like water.
+                </p>
+                <video src="assets/fire.mp4" autoplay loop muted controls></video>
+                <p>
+
+                </p>
+                <video src="assets/wildfire.mp4" autoplay loop muted controls></video>
+                <p>
+                    
+                </p>
+                <video src="assets/water.mp4" autoplay loop muted controls></video>
+                
+                <p class="section-title">Performance Considerations and Parallelization</p>
+                <p>
+                    The current implementation handles a resolution of 50x50x50 (125,000 cells) quite well.
+                    To push this further, I plan to explore GPU computation or multi-threading. Theres also some other small improvements to be made like early termination on the Jacobi solver.
+                </p>
+                <p>
+                    For more details on the algorithm, refer to 
+                    <a 
+                        href="http://graphics.cs.cmu.edu/nsp/course/15-464/Fall09/papers/StamFluidforGames.pdf"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
+                        Jos Stam's original paper
+                    </a>.
+                </p>
+
+                <p>
+                    This project is licensed under the MIT License.
+                    See the 
+                    <a href="LICENSE" target="_blank" rel="noopener noreferrer">LICENSE</a>
+                    file for details.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
